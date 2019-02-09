@@ -1,21 +1,27 @@
-# angular2-material-calculator
+# MaterialProject
 
-**Angular2 calculator inspired by Material Design.**
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
 
-# Description
-A simple Angular2 calculator inspired by Google's Material Design.
+## Development server
 
-# Getting Started
-1. Clone this repo
-2. Open a console and type "npm install"
-3. Start the calculator with "npm start"
-4. Open your localhost and start calculating!
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-# Buttons
-There are 23 different buttons - 10 numbers, 8 operators and 5 memory functions. You can add new buttons in the ButtonsList class and then define the method in buttons component.
+## Code scaffolding
 
-# Info
-This is my very first Angular2 project, written without any previous experiences with Angular2 or TypeScript. I will try to improve it as I learn new techniques and practices in Angular2.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-# Author
-* Author: chaoss108
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

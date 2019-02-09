@@ -1,1 +1,35 @@
-<calculator-wrapper></calculator-wrapper>
+<div style="text-align:center">
+  <h1>
+    Basic {{title}}!
+  </h1>
+</div>
+
+<div class="flexBoxContainer">
+  <div class="calculator">
+    <input matInput [(ngModel)]="value" name=value />
+    <button class="keys" mat-button (click)="clear()"> C </button>
+    <button class="keys" mat-button disabled>+/- </button>
+    <button class="keys" mat-button (click)="opr('/')">/ </button>
+    <button class="keys" mat-button (click)="opr('*')">* </button>
+    <button class="keys" mat-button (click)="num('7')">7 </button>
+    <button class="keys" mat-button (click)="num('8')">8 </button>
+    <button class="keys" mat-button (click)="num('9')">9 </button>
+    <button class="keys" mat-button (click)="opr('-')">- </button>
+    <button class="keys" mat-button (click)="num('4')">4 </button>
+    <button class="keys" mat-button (click)="num('5')">5 </button>
+    <button class="keys" mat-button (click)="num('6')">6 </button>
+    <button class="keys" mat-button (click)="opr('+')">+ </button>
+    <section id="anomaly-keys-wrapper">
+      <section>
+        <button class="keys" mat-button (click)="num('1')">1 </button>
+        <button class="keys" mat-button (click)="num('2')">2 </button>
+        <button class="keys" mat-button (click)="num('3')">3 </button>
+        <button class="keys long" mat-button (click)="num('0')">0 </button>
+        <button class="keys" mat-button (click)="num('.')">. </button>
+      </section>
+      <section>
+        <button class="keys tall" mat-button (click)="calculate()">= </button>
+      </section>
+    </section>
+  </div>
+</div>
