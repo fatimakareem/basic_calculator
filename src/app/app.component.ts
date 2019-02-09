@@ -9,6 +9,7 @@ import { Observable } from 'rxjs/Rx';
 })
 export class AppComponent {
   value = '';
+  result: any;
   operator:any;
   nums:any;
   public val1:any;
@@ -22,40 +23,45 @@ export class AppComponent {
      if (!this.operator) {
     this.value = this.value + val;
       this.val1 = Number(this.value);
-    }
-    else {
+    } else {
       this.value = this.value + val;
       this.val2 = Number(this.value);
     }
 
   }
 
-  calculate() {
+
+  calculate(): void {
     if (this.operator == '+') {
       this.nums = Observable.of(this.val1 + this.val2);
-    }
-    if (this.operator == '*') {
+    } else if (this.operator == '*') {
       this.nums = Observable.of(this.val1 * this.val2);
-    }
-    if (this.operator == '-') {
+    } else if (this.operator == '-') {
       this.nums = Observable.of(this.val1 - this.val2);
-    }
-    if (this.operator == '/') {
+    } else if (this.operator == '/') {
       this.nums = Observable.of(this.val1 / this.val2);
     }
     const calValues = map((val: number) => val);
     const calculatedNums = calValues(this.nums);
-
+    this.value = (this.val1 + this.operator + this.val2).toString()
     calculatedNums.subscribe(x => {
-      this.value = x.toString();
+        this.value = x.toString();
+        this.val1 = Number(x);
     }
 
     );
     this.operator = '';
-    this.val1 = '';
     this.val2 = '';
   }
-  clear() {
+
+  clear(): void {
     this.value = '';
+  }
+
+  clearScreen(): void {
+    this.value = '';
+    this.val1 = '' ;
+    this.operator = '';
+    this.val2 = '';
   }
 }
